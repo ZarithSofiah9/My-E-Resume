@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Card</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Garamond, sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+
+        .jumbotron {
+            background-color: #d9534f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9534f; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+            border-radius: 5px; /* Optional: Rounded corners on hover */
+        }
+        nav ul li a.active {
+        background-color: #d9534f;
+        color: #fff;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        main {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 75%;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .status {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        h1 span {
+            color: #d9534f;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #666;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+        .progress-circles {
+           display: flex;
+           justify-content: space-between;
+        }
+
+        .progress-circle {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .progress-circle svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+
+        .progress-bar {
+            fill: none;
+            stroke-width: 10;
+            stroke: #d9534f;
+            stroke-dasharray: 283 283;
+            transition: stroke-dashoffset 0.3s linear;
+        }
+        .progress-bar2 {
+            fill: none;
+            stroke-width: 10;
+            stroke: #d9534f;
+            stroke-dasharray: 235 283;
+            transition: stroke-dashoffset 0.3s linear;
+        }
+        .progress-bar3 {
+            fill: none;
+            stroke-width: 10;
+            stroke: #d9534f;
+            stroke-dasharray: 141 283;
+            transition: stroke-dashoffset 0.3s linear;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .progress-text span:first-child {
+            font-size: 18px;
+            color: #0a0909;
+        }
+
+        .progress-text span:last-child {
+            font-size: 14px;
+            color: #0a0909;
+        }
+        .progress-bar {
+            width: 50%;
+            background-color: #f3f3f3;
+        }
+
+        .progress-bar div {
+            height: 20px;
+        }
+
+        #progress-bar-1 {
+            width: 65%;
+            background-color: #c94047;
+        }
+
+        #progress-bar-2 {
+            width: 90%;
+            background-color: #c94047;
+        }
+
+        #progress-bar-3 {
+            width: 80%;
+            background-color: #c94047;
+        }
+        #progress-bar-4 {
+            width: 65%;
+            background-color: #c94047;
+        }
+        #progress-bar-5 {
+            width: 65%;
+            background-color: #c94047;
+        }
+
+        #progress-bar-6 {
+            width: 90%;
+            background-color: #c94047;
+        }
+
+        #progress-bar-7 {
+            width: 80%;
+            background-color: #c94047;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 1px;
+            text-align: left;
+            background: #78081c;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 style="font-size: 400%; font-weight: 100;">Zarith Sofiah's E-Resume</h1>
+    </div>
+    <header id="nav">
+        <nav>
+            <ul>
+                <li><a  href="home.html">Home</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a class="active"href="skills.html">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <script>
+        window.onscroll = function() {myFunction()};
+        
+        var nav = document.getElementById("nav");
+        var sticky = nav.offsetTop;
+    
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                nav.classList.add("sticky")
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+        </script>
+    </header>
+    
+    <main>
+        <div class="card">
+    
+            <div class="details">
+
+                <h1 style="text-align: center;padding-top: 20px;padding-bottom: 20px;"><span>Language Skills</span></h1>
+    
+                <div class="progress-circles">
+                    <div class="progress-circle">
+                        <svg>
+                            <circle class="progress-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span>100%</span>
+                            <span>Bahasa Melayu</span>
+                        </div>
+                    </div>
+                    <div class="progress-circle">
+                        <svg>
+                            <circle class="progress-bar2" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span>80%</span>
+                            <span>English</span>
+                        </div>
+                    </div>
+                    <div class="progress-circle">
+                        <svg>
+                            <circle class="progress-bar3" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span>50%</span>
+                            <span>Italian</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 style="text-align: center;padding-top: 30px;"><span>Software Skills</span></h1>
+                <p>C++:</p>
+                <div class="progress-bar" style="color: #fff;">
+                    <div id="progress-bar-1">Beginner</div>
+                </div>
+
+                <p>HTML:</p>
+                <div class="progress-bar" style="color:#fff;">
+                    <div id="progress-bar-2">Advance</div>
+                </div>
+
+                <p>JAVA:</p>
+                <div class="progress-bar" style="color:#fff;">
+                    <div id="progress-bar-3">Intermediate</div>
+                </div>
+
+                <p>CSS:</p>
+                <div class="progress-bar" style="color: #fff;">
+                    <div id="progress-bar-4">Beginner</div>
+                </div>
+
+                <p>MICROSOFT EXCEL:</p>
+                <div class="progress-bar" style="color: #fff;">
+                    <div id="progress-bar-5">Beginner</div>
+                </div>
+
+                <p>MICROSOFT WORD:</p>
+                <div class="progress-bar" style="color:#fff;">
+                    <div id="progress-bar-6">Advance</div>
+                </div>
+
+                <p>MICROSOFT POWER POINT:</p>
+                <div class="progress-bar" style="color:#fff;">
+                    <div id="progress-bar-7">Intermediate</div>
+                </div>
+
+                <h1 style="text-align: center;padding-top: 30px;"><span>Leadership Skills</span></h1>
+                <ul style="list-style-type: disc;">
+                    <li>Have the courage to speak in front of people</li>
+                    <li>Can lead a group of people</li>
+                    <li>Can distribute works among group members</li>
+                </ul>
+
+            </div>
+        </div>
+    </main>
+    <div class="footer"> 
+        <h3 style="text-align: center;">Copyright @ 2024 Nurul Zarith Sofiah Binti Zazali. All rights reserved</h3>
+    </div>
+</body>
+</html>

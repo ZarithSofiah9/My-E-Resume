@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Card</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Garamond, sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .jumbotron {
+            background-color: #d9534f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9534f; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+            border-radius: 5px; /* Optional: Rounded corners on hover */
+        }
+        nav ul li a.active {
+            background-color: #d9534f;
+            color: #fff;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        main {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 75%;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .status {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        h1 span {
+            color: #d9534f;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #666;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+        .services {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: #78081c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .service-item p {
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .order-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background: #d9534f;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #c9302c;
+        }
+
+        .website-logo {
+            height: 90px;
+            width: 100px;
+            padding-right: 10px;
+        }
+
+        .website-logo2 {
+            height: 100px;
+            width: 90px;
+            padding-right: 10px;
+        }
+
+        .picture {
+            height: 280px;
+            width: 200px;
+            padding-right: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 1px;
+            text-align: left;
+            background: #78081c;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 style="font-size: 400%; font-weight: 100;">Zarith Sofiah's E-Resume</h1>
+    </div>
+    <header id="nav">
+        <nav>
+            <ul>
+                <li><a  href="home.html">Home</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a class="active"href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var nav = document.getElementById("nav");
+            var sticky = nav.offsetTop;
+        
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    nav.classList.add("sticky")
+                } else {
+                    nav.classList.remove("sticky");
+                }
+            }
+            </script>
+    </header>
+    <main>
+        <div class="card">
+            <div class="details">
+                <h1 style="text-align: center;padding-top: 20px;"><span>EDUCATION</span></h1>
+                <section class="services">
+                    <div class="services-container">
+                        <div class="service-item">
+                            <h2>HIGH SCHOOL</h2>
+                            <img class="website-logo" src="logo hs.jpg" alt="logo high school">
+                            <h3>Co-Curricular Achievement</h3>
+                            <p>Active member of the Pasukan Kadet Bersatu Malaysia, 
+                                achieving top placements in regional and national competitions. 
+                                Also, served as the head of the history club.
+                            </p>
+                            
+                        </div>
+                        <div class="service-item">
+                            <h2>MATRICULATION</h2>
+                            <img class="website-logo" src="logo kmj.jpg" alt="logo matriculation">
+                            <h3>Technical Skills</h3>
+                            <p>Proficient in relevant software like picart and canva, which I 
+                               utilized to design the school poster about all program and manage
+                               social media platforms for matriculation clubs.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h2>DEGREE</h2>
+                            <img class="website-logo2" src="logo uitm.jpg" alt="logo degree">
+                            <h3>Community And Leadership</h3>
+                            <p>In the dynamic realm of AIMS, a club for system students, I took the lead 
+                               in organizing significant events each semester. My focus was on crafting 
+                               engaging experiences, particularly for new students, to pique their interest 
+                               and encourage their participation in our thriving association club.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <img class="picture" src="sijil spm.jpg" alt="sijil spm">
+                            <h4 style="color: white;">SPM: 4A1B4C1D</h4>
+                            <img class="picture" src="sijil sejarah.jpg" alt="sijil sejarag">
+                            <h4 style="color: white;">HISTORICAL ASSOCIATION CHAIRMAN'S CERTIFICATE</h4>
+                        </div>
+                        <div class="service-item">
+                            <img class="picture" src="sijil matrik.jpg" alt="sijil matrik">
+                            <h4 style="color: white;">PNGK: 3.63</h4>
+                            <img class="picture" src="sijil matrik.jpg" alt="sijil muet">
+                            <h4 style="color: white;">MUET BAND: 3.5</h4>
+                        </div>
+                        <div class="service-item">
+                            <img class="picture" src="sijil dekan.jpg" alt="sijil dekan">
+                            <h4 style="color: white;">GPA: 3.63</h4>
+                            <img class="picture" src="sijil uitm.jpg" alt="sijil uitm">
+                            <h4 style="color: white;">COLLEGE SPONSORED FOOD BUREAU CERTIFICATE</h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div class="footer"> 
+        <h3 style="text-align: center;">Copyright @ 2024 Nurul Zarith Sofiah Binti Zazali. All rights reserved</h3>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Card</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Garamond, sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .jumbotron {
+            background-color: #d9534f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9534f; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+            border-radius: 5px; /* Optional: Rounded corners on hover */
+        }
+
+        nav ul li a.active {
+            background-color: #d9534f;
+            color: #fff;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        main {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 75%;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .status {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        h1 span {
+            color: #d9534f;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: #ca2b2b;
+            font-weight: bold;
+        }
+
+        .picture {
+                    height: 445.5px;
+                    width: 315px;
+                    padding-right: 5px;
+        }
+
+        /* Social Media */
+        .social-links {
+                    margin-top: 20px;
+        }
+
+        .social-links a {
+                    display: inline-block;
+                    margin-right: 20px; /* Adjust spacing between social media icons */
+        }
+
+        .social-links a img {
+                    width: 50px; /* Adjust the size of the social media icons */
+        }
+
+        /* Footer */
+        .footer {
+            padding: 1px;
+            text-align: left;
+            background: #78081c;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 style="font-size: 400%; font-weight: 100;">Zarith Sofiah's E-Resume</h1>
+    </div>
+    <header id="nav">
+        <nav>
+            <ul>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var nav = document.getElementById("nav");
+            var sticky = nav.offsetTop;
+        
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    nav.classList.add("sticky")
+                } else {
+                    nav.classList.remove("sticky");
+                }
+            }
+            </script>
+    </header>
+    <main>
+        <div class="card">
+            <div class="container">
+                <div class="content">
+                    <h2>WELCOME TO MY WEBSITE</h2>
+                    <h1>Hi, I'm <span class="highlight">Zarith Sofiah </span><br>a Fresh Graduate.</h1>
+                    <p style="text-align: justify;">Hello! My name is Nurul Zarith Sofiah, and I am a recent graduate with a degree in System Management. 
+                        I am passionate about leveraging technology to optimize organizational processes and drive efficiency. Throughout my academic
+                        journey, I have gained comprehensive knowledge in system analysis, project management, and IT infrastructure, which I am eager
+                        to apply in a dynamic and challenging work environment
+                    </p>
+    
+                    <p style="text-align: justify;"> For your information, I believe with a strong technical background, I'm well-versed in system management principles, 
+                        including database management, network security, and software development. My proficiency in programming languages like Java and C++ 
+                        enables me to solve complex technical problems. Additionally, I value teamwork and communication, having collaborated on numerous group 
+                        projects to design and implement system solutions. My experiences have underscored the importance of listening, feedback, and synergy in 
+                        achieving project success.
+                    </p>
+
+                    <p style="text-align: justify;"> Last but not least, I am excited to bring my fresh perspective, technical skills, and enthusiasm to your organization. Please feel free
+                        to explore my portfolio and contact me for any inquiries or further discussions. Let’s work together to create innovative solutions and drive success!
+                    </p>
+
+                    <p> Stay connected with me on my social media </p>
+                    <div class="social-links" style="padding-right: 30%">
+                        <a href="https://www.instagram.com/zrth.sofiah?igsh=dW90eXE0NWRhaDF3&utm_source=qr" target="_blank"><img src="instagram icon.png" alt="Instagram"></a>
+                        <a href="https://x.com/ZrthSofiah?t=4_7mHxCdN2NbtfCv80ghzw&s=09" target="_blank"><img src="x icon.png" alt="X"></a>
+                        <a href="https://youtube.com/@zarithsofiah4972?si=UB5iOcg8eAD1NPtp" target="_blank"><img src="yt logo.png" alt="YouTube"></a>
+                        <a href="https://www.facebook.com/zarith.sofiah.79?mibextid=LQQJ4d" target="_blank"><img src="fb icon.png" alt="Facebook"></a>
+                        <a href="https://www.tiktok.com/@zrthsofiah?_t=8n3PuSnbEOX&_r=1" target="_blank"><img src="tiktok icon.png" alt="Tiktok"></a>
+                        
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="picture" src="Formal picture.png" alt="Zarith Sofiah">
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <div class="footer"> 
+        <h3 style="text-align: center;">Copyright @ 2024 Nurul Zarith Sofiah Binti Zazali. All rights reserved</h3>
+    </div>
+</body>
+</html>

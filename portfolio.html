@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Card</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Garamond, sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+
+        .jumbotron {
+            background-color: #d9534f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9534f; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+            border-radius: 5px; /* Optional: Rounded corners on hover */
+        }
+
+        nav ul li a.active {
+            background-color: #d9534f;
+            color: #fff;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        main {
+                    justify-content: center;
+                    align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 75%;
+        }
+
+        .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .status {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        h1 span {
+            color: #d9534f;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #666;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-info img {
+            border-radius: 50%;
+        }
+
+        .contact-info div {
+            margin-left: 10px;
+        }
+
+        /* Footer */
+        .footer {
+                padding: 1px;
+                text-align: left;
+                background: #970f28;
+                color: #fff;
+                margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 style="font-size: 400%; font-weight: 100;">Zarith Sofiah's E-Resume</h1>
+    </div>
+    <header id="nav">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a class="active"href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var nav = document.getElementById("nav");
+            var sticky = nav.offsetTop;
+        
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    nav.classList.add("sticky")
+                } else {
+                    nav.classList.remove("sticky");
+                }
+            }
+            </script>
+    </header>
+    <main>
+        <div class="card">
+            
+            <div class="details">
+    
+                <h1 style="text-align: center;padding-top: 20px;padding-bottom: 20px;"><span>BROCHURE</span></h1>
+                <div class="image" style="width: 150px; align-items: center;display: flexbox;">
+                    <img class="picture" src="brochure1.jpg" alt="brochure">
+                    <img class="picture" src="brochure 2.jpg" alt="brochure">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="details">
+    
+                <h1 style="text-align: center;padding-top: 20px;padding-bottom: 20px;"><span>CLUB POSTER</span></h1>
+                <div class="image" >
+                    <img style="width:800px; align-self: center;" class="picture" src="sijil.png" alt="sijil poster">
+                </div>
+            </div>    
+        </div>
+    </main>
+    <div class="footer"> 
+        <h3 style="text-align: center;">Copyright @ 2024 Nurul Zarith Sofiah Binti Zazali. All rights reserved</h3>
+    </div>
+</body>
+</html>
